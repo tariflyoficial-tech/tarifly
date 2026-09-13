@@ -1,17 +1,51 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import PlaceAutocomplete from "./PlaceAutocomplete";
+import type { PlaceSuggestion } from "../api/autocomplete/route";
 
 type Tab = "voos" | "hospedagem";
+
+// TODO: trocar pelo marker real da conta Travelpayouts (Ferramentas > Meu ID/marker).
+const AVIASALES_MARKER = "000000";
+
+function ddmm(dateStr: string) {
+  const [, month, day] = dateStr.split("-");
+  return `${day}${month}`;
+}
 
 export default function SearchWidget() {
   const [tab, setTab] = useState<Tab>("voos");
 
+  const [origin, setOrigin] = useState<PlaceSuggestion | null>(null);
+  const [destination, setDestination] = useState<PlaceSuggestion | null>(
+    null,
+  );
+  const [departDate, setDepartDate] = useState("");
+  const [returnDate, setReturnDate] = useState("");
+  const [adults, setAdults] = useState("1");
+
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // TODO: integrar com a API do Travelpayouts (Aviasales para voos, Hotellook para hospedagem)
-    // assim que o token de API estiver disponível.
-    alert("Busca ainda não conectada a um provedor. Em breve!");
+
+    if (tab === "hospedagem") {
+      // TODO: integrar busca de hospedagem (Hotellook) quando o token de API estiver disponível.
+      alert("Busca de hospedagem ainda não conectada. Em breve!");
+      return;
+    }
+
+    if (!origin || !destination) {
+      alert("Escolha origem e destino na lista de sugestões.");
+      return;
+    }
+
+    const params =
+      `${origin.code}${ddmm(departDate)}${destination.code}` +
+      (returnDate ? ddmm(returnDate) : "") +
+      adults;
+
+    const url = `https://www.aviasales.com/search/${params}?marker=${AVIASALES_MARKER}`;
+    window.location.href = url;
   }
 
   return (
@@ -29,7 +63,22 @@ export default function SearchWidget() {
       </div>
 
       <form onSubmit={handleSubmit} className="p-5">
-        {tab === "voos" ? <FlightFields /> : <HotelFields />}
+        {tab === "voos" ? (
+          <FlightFields
+            origin={origin}
+            destination={destination}
+            departDate={departDate}
+            returnDate={returnDate}
+            adults={adults}
+            onOriginSelect={setOrigin}
+            onDestinationSelect={setDestination}
+            onDepartDateChange={setDepartDate}
+            onReturnDateChange={setReturnDate}
+            onAdultsChange={setAdults}
+          />
+        ) : (
+          <HotelFields />
+        )}
 
         <button
           type="submit"
@@ -84,33 +133,66 @@ function Field({
 const inputClass =
   "rounded-lg border border-gray-200 px-3 py-2.5 text-sm text-gray-900 outline-none focus:border-brand focus:ring-1 focus:ring-brand";
 
-function FlightFields() {
+function FlightFields({
+  origin,
+  destination,
+  departDate,
+  returnDate,
+  adults,
+  onOriginSelect,
+  onDestinationSelect,
+  onDepartDateChange,
+  onReturnDateChange,
+  onAdultsChange,
+}: {
+  origin: PlaceSuggestion | null;
+  destination: PlaceSuggestion | null;
+  departDate: string;
+  returnDate: string;
+  adults: string;
+  onOriginSelect: (p: PlaceSuggestion) => void;
+  onDestinationSelect: (p: PlaceSuggestion) => void;
+  onDepartDateChange: (v: string) => void;
+  onReturnDateChange: (v: string) => void;
+  onAdultsChange: (v: string) => void;
+}) {
   return (
     <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
-      <Field label="Origem">
-        <input
-          type="text"
-          placeholder="Cidade ou aeroporto"
-          className={inputClass}
-          required
-        />
-      </Field>
-      <Field label="Destino">
-        <input
-          type="text"
-          placeholder="Cidade ou aeroporto"
-          className={inputClass}
-          required
-        />
-      </Field>
+      <PlaceAutocomplete
+        label="Origem"
+        placeholder="Cidade ou aeroporto"
+        value={origin}
+        onSelect={onOriginSelect}
+      />
+      <PlaceAutocomplete
+        label="Destino"
+        placeholder="Cidade ou aeroporto"
+        value={destination}
+        onSelect={onDestinationSelect}
+      />
       <Field label="Ida">
-        <input type="date" className={inputClass} required />
+        <input
+          type="date"
+          className={inputClass}
+          required
+          value={departDate}
+          onChange={(e) => onDepartDateChange(e.target.value)}
+        />
       </Field>
       <Field label="Volta">
-        <input type="date" className={inputClass} />
+        <input
+          type="date"
+          className={inputClass}
+          value={returnDate}
+          onChange={(e) => onReturnDateChange(e.target.value)}
+        />
       </Field>
       <Field label="Passageiros">
-        <select className={inputClass} defaultValue="1">
+        <select
+          className={inputClass}
+          value={adults}
+          onChange={(e) => onAdultsChange(e.target.value)}
+        >
           {[1, 2, 3, 4, 5, 6].map((n) => (
             <option key={n} value={n}>
               {n} {n === 1 ? "adulto" : "adultos"}
