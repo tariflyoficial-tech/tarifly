@@ -8,6 +8,11 @@ const artigosRelacionados = [
   { slug: "quantos-dias-ficar", titulo: "Quantos dias ficar em Orlando" },
   { slug: "erros-comuns", titulo: "Erros comuns de quem vai pela primeira vez" },
   { slug: "como-economizar", titulo: "Como economizar sem abrir mão dos parques" },
+  { slug: "quando-comprar-passagem", titulo: "Quando comprar passagem pra Orlando" },
+  { slug: "voo-direto-ou-conexao", titulo: "Voo direto ou com conexão" },
+  { slug: "onde-ficar-em-orlando", titulo: "Onde ficar em Orlando (guia de bairros)" },
+  { slug: "casa-de-temporada-ou-hotel", titulo: "Casa de temporada ou hotel" },
+  { slug: "disney-ou-universal", titulo: "Disney ou Universal: qual escolher" },
 ];
 
 export const metadata: Metadata = {
@@ -89,6 +94,14 @@ export default function GuiaOrlando() {
               grupo ou família grande.
             </li>
           </ul>
+          <p className="mt-3 text-sm">
+            <Link
+              href="/destinos/orlando/onde-ficar-em-orlando"
+              className="text-brand hover:underline"
+            >
+              Ver o guia completo de bairros →
+            </Link>
+          </p>
         </section>
 
         <section>
