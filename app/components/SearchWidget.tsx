@@ -6,12 +6,9 @@ import type { PlaceSuggestion } from "../api/autocomplete/route";
 
 type Tab = "voos" | "hospedagem";
 
-const AVIASALES_MARKER = "777208";
-
-function ddmm(dateStr: string) {
-  const [, month, day] = dateStr.split("-");
-  return `${day}${month}`;
-}
+// Busca de voos temporariamente desativada: o Aviasales não tem
+// português/Real, então a experiência ficava ruim pro público brasileiro.
+// Trocando pro Trip.com (via Travelpayouts), aguardando aprovação do programa.
 
 export default function SearchWidget() {
   const [tab, setTab] = useState<Tab>("voos");
@@ -26,25 +23,7 @@ export default function SearchWidget() {
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-
-    if (tab === "hospedagem") {
-      // TODO: integrar busca de hospedagem (Hotellook) quando o token de API estiver disponível.
-      alert("Busca de hospedagem ainda não conectada. Em breve!");
-      return;
-    }
-
-    if (!origin || !destination) {
-      alert("Escolha origem e destino na lista de sugestões.");
-      return;
-    }
-
-    const params =
-      `${origin.code}${ddmm(departDate)}${destination.code}` +
-      (returnDate ? ddmm(returnDate) : "") +
-      adults;
-
-    const url = `https://www.aviasales.com/search/${params}?marker=${AVIASALES_MARKER}`;
-    window.location.href = url;
+    alert("Busca ainda não conectada. Em breve!");
   }
 
   return (
