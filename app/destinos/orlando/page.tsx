@@ -13,6 +13,11 @@ const artigosRelacionados = [
   { slug: "onde-ficar-em-orlando", titulo: "Onde ficar em Orlando (guia de bairros)" },
   { slug: "casa-de-temporada-ou-hotel", titulo: "Casa de temporada ou hotel" },
   { slug: "disney-ou-universal", titulo: "Disney ou Universal: qual escolher" },
+  { slug: "ingressos-dos-parques", titulo: "Ingressos dos parques: quando comprar" },
+  { slug: "fora-dos-parques", titulo: "Orlando fora dos parques" },
+  { slug: "alugar-carro", titulo: "Alugar carro em Orlando" },
+  { slug: "seguro-viagem", titulo: "Seguro viagem pra Orlando" },
+  { slug: "chip-e-internet", titulo: "Chip ou eSIM pra Orlando" },
 ];
 
 export const metadata: Metadata = {
