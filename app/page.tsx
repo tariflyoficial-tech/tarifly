@@ -23,6 +23,9 @@ export default function Home() {
           <a href="#como-funciona" className="hover:text-brand">
             Como funciona
           </a>
+          <Link href="/destinos" className="hover:text-brand">
+            Guias
+          </Link>
         </nav>
       </header>
 
