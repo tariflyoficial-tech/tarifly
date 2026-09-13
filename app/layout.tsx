@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -28,10 +27,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col bg-white text-[#101828]">
         {children}
 
-        {/* Travelpayouts Drive */}
-        <Script
-          id="travelpayouts-drive"
-          strategy="afterInteractive"
+        {/* Travelpayouts Drive — precisa ser tag <script> literal (renderizada
+            no HTML do servidor) porque a verificação da Travelpayouts lê o
+            HTML bruto da página, sem executar JavaScript. */}
+        {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+        {/* @ts-expect-error atributos exigidos pela Travelpayouts, fora da tipagem padrão de <script> */}
+        <script
           nowprocket=""
           data-noptimize="1"
           data-cfasync="false"
