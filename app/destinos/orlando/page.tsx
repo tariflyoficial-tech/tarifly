@@ -1,5 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import BuscarCTA from "../../components/BuscarCTA";
+
+const artigosRelacionados = [
+  { slug: "melhor-epoca-para-viajar", titulo: "Melhor época pra viajar pra Orlando" },
+  { slug: "quanto-custa-uma-viagem", titulo: "Quanto custa uma viagem pra Orlando" },
+  { slug: "quantos-dias-ficar", titulo: "Quantos dias ficar em Orlando" },
+  { slug: "erros-comuns", titulo: "Erros comuns de quem vai pela primeira vez" },
+  { slug: "como-economizar", titulo: "Como economizar sem abrir mão dos parques" },
+];
 
 export const metadata: Metadata = {
   title: "Orlando: quando comprar passagem, onde ficar e como economizar — Tarifly",
@@ -93,20 +102,29 @@ export default function GuiaOrlando() {
             de aplicativo o tempo todo, principalmente em grupo.
           </p>
         </section>
+
+        <BuscarCTA compact title="Já viu o essencial? Compare o preço da sua passagem" />
+
+        <section>
+          <h2 className="text-lg font-semibold text-gray-900">
+            Continue planejando
+          </h2>
+          <ul className="mt-2 list-disc space-y-1 pl-5">
+            {artigosRelacionados.map((a) => (
+              <li key={a.slug}>
+                <Link
+                  href={`/destinos/orlando/${a.slug}`}
+                  className="text-brand hover:underline"
+                >
+                  {a.titulo}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
       </div>
 
-      <div className="mt-12 rounded-2xl bg-brand px-6 py-8 text-center text-white">
-        <h2 className="text-xl font-bold">Já pode comparar preços</h2>
-        <p className="mt-2 text-white/80">
-          Passagem e hospedagem pra Orlando, sem sair do site.
-        </p>
-        <a
-          href="/#busca"
-          className="mt-4 inline-block rounded-xl bg-accent px-6 py-3 font-semibold text-white hover:bg-accent-dark"
-        >
-          Buscar agora
-        </a>
-      </div>
+      <BuscarCTA />
     </div>
   );
 }
