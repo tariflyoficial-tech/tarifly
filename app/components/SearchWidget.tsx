@@ -6,8 +6,7 @@ import type { PlaceSuggestion } from "../api/autocomplete/route";
 
 type Tab = "voos" | "hospedagem";
 
-// TODO: trocar pelo marker real da conta Travelpayouts (Ferramentas > Meu ID/marker).
-const AVIASALES_MARKER = "000000";
+const AVIASALES_MARKER = "777208";
 
 function ddmm(dateStr: string) {
   const [, month, day] = dateStr.split("-");
