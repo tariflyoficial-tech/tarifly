@@ -181,11 +181,6 @@ export default function OutletsEmOrlando() {
               mala a mais na volta pode custar tanto quanto o que você
               economizou nas compras.
             </li>
-            <li>
-              <strong>Cupons e programas de desconto.</strong> Os próprios
-              outlets costumam ter cadastro com ofertas pra turistas, mas
-              confira as regras no site oficial.
-            </li>
           </ul>
         </section>
 
