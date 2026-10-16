@@ -27,6 +27,7 @@ export default function ArticleJsonLd({
           datePublished: post.data,
           dateModified: post.atualizado ?? post.data,
         }),
+        ...(post?.imagem && { image: `${SITE_URL}${post.imagem}` }),
         mainEntityOfPage: url,
         author: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
         publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },

@@ -24,6 +24,9 @@ export const posts: Post[] = [
     descricao: "Roteiro de 7 dias em Orlando, dia a dia: quais parques da Disney e da Universal encaixar, onde colocar o dia livre e como adaptar pra 5 ou 10 dias.",
     categoria: "Orlando · Roteiro",
     data: "2026-10-15",
+    imagem: "/blog/roteiro-7-dias.jpg",
+    imagemAlt:
+      "Ilustração de uma família de costas olhando um lago em Orlando ao pôr do sol, com parques ao fundo",
   },
   {
     slug: "outlets-em-orlando",
@@ -32,6 +35,9 @@ export const posts: Post[] = [
     descricao: "Guia dos outlets de Orlando: os dois Premium Outlets, quanto tempo reservar, o imposto que não está na etiqueta e como funciona a cota de isenção da Receita Federal.",
     categoria: "Orlando · Compras",
     data: "2026-10-15",
+    imagem: "/blog/outlets-em-orlando.jpg",
+    imagemAlt:
+      "Ilustração de uma família caminhando com sacolas de compras em um outlet de Orlando ao pôr do sol",
   },
   {
     slug: "alugar-carro",

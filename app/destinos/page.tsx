@@ -18,10 +18,12 @@ function Capa({
   post,
   indice,
   className,
+  priority = false,
 }: {
   post: Post;
   indice: number;
   className: string;
+  priority?: boolean;
 }) {
   if (post.imagem) {
     return (
@@ -30,6 +32,7 @@ function Capa({
           src={post.imagem}
           alt={post.imagemAlt ?? post.titulo}
           fill
+          priority={priority}
           sizes="(min-width: 1024px) 480px, 100vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
@@ -82,6 +85,7 @@ export default function Blog() {
         <Capa
           post={destaque}
           indice={0}
+          priority
           className="aspect-[4/3] rounded-2xl"
         />
         <div>
