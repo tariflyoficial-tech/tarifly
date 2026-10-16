@@ -4,29 +4,43 @@ import SearchWidget from "./components/SearchWidget";
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col">
-      <header className="flex items-center justify-between px-6 py-5 sm:px-10">
-        <div className="flex items-baseline gap-2">
-          <span className="text-xl font-bold tracking-tight text-brand">
-            tarifly
-          </span>
-          <span className="hidden text-xs text-gray-400 sm:inline">
-            viagem no seu ritmo
-          </span>
+      <header className="sticky top-0 z-30 border-b border-gray-100 bg-white/90 px-2 py-3 sm:px-4 backdrop-blur">
+        <div className="flex flex-col items-center gap-2">
+          <div className="flex items-baseline gap-2">
+            <span className="text-2xl font-bold tracking-tight text-brand">
+              tarifly
+            </span>
+            <span className="hidden text-xs text-gray-500 sm:inline">
+              viagem no seu ritmo
+            </span>
+          </div>
+          <nav className="flex flex-wrap items-center justify-center gap-x-0.5 gap-y-1 text-[13px] font-medium text-gray-800 sm:gap-x-2 sm:text-sm">
+            <a
+              href="#busca"
+              className="rounded-full px-1.5 py-1.5 transition-colors hover:bg-brand/5 sm:px-3 hover:text-brand"
+            >
+              Passagens
+            </a>
+            <a
+              href="#busca"
+              className="rounded-full px-1.5 py-1.5 transition-colors hover:bg-brand/5 sm:px-3 hover:text-brand"
+            >
+              Hospedagem
+            </a>
+            <a
+              href="#como-funciona"
+              className="rounded-full px-1.5 py-1.5 transition-colors hover:bg-brand/5 sm:px-3 hover:text-brand"
+            >
+              Como funciona
+            </a>
+            <Link
+              href="/destinos"
+              className="rounded-full bg-accent px-3 py-1.5 sm:px-4 font-semibold text-white shadow-sm transition-colors hover:bg-accent-dark"
+            >
+              Blog
+            </Link>
+          </nav>
         </div>
-        <nav className="hidden gap-6 text-sm font-medium text-gray-600 sm:flex">
-          <a href="#busca" className="hover:text-brand">
-            Passagens
-          </a>
-          <a href="#busca" className="hover:text-brand">
-            Hospedagem
-          </a>
-          <a href="#como-funciona" className="hover:text-brand">
-            Como funciona
-          </a>
-          <Link href="/destinos" className="hover:text-brand">
-            Blog
-          </Link>
-        </nav>
       </header>
 
       <main className="flex flex-1 flex-col items-center bg-gradient-to-b from-brand to-brand-dark px-4 pb-16 pt-12 text-white sm:pt-20">
@@ -38,14 +52,14 @@ export default function Home() {
           segundos, e reserve direto com quem vende.
         </p>
 
-        <div id="busca" className="mt-8 w-full scroll-mt-24 flex justify-center">
+        <div id="busca" className="mt-8 w-full scroll-mt-32 flex justify-center">
           <SearchWidget />
         </div>
       </main>
 
       <section
         id="como-funciona"
-        className="mx-auto grid max-w-4xl scroll-mt-24 grid-cols-1 gap-8 px-6 py-14 text-center sm:grid-cols-3"
+        className="mx-auto grid max-w-4xl scroll-mt-32 grid-cols-1 gap-8 px-6 py-14 text-center sm:grid-cols-3"
       >
         <Feature
           title="Compare em segundos"
