@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
 import VistoCTA from "../../../components/VistoCTA";
+import MaisLidas from "../../../components/MaisLidas";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
 import PostMeta from "../../../components/PostMeta";
 
@@ -112,6 +113,8 @@ export default function QuantosDias() {
       <BuscarCTA />
 
       <VistoCTA />
+
+      <MaisLidas slug="quantos-dias-ficar" />
 
       <p className="mt-8 text-sm text-gray-400">
         Veja também:{" "}

@@ -236,6 +236,17 @@ export const posts: Post[] = [
   },
 ];
 
+// Artigos do bloco "Mais lidas", no fim de cada artigo, em ordem de prioridade.
+// Escolha manual: troque pelos mais lidos de verdade quando houver dados do
+// Search Console ou do Analytics.
+export const maisLidasSlugs = [
+  "quanto-custa-uma-viagem",
+  "onde-ficar-em-orlando",
+  "quando-comprar-passagem",
+  "roteiro-7-dias",
+  "melhor-epoca-para-viajar",
+];
+
 export function getPost(destino: string, slug: string): Post | undefined {
   return posts.find((p) => p.destino === destino && p.slug === slug);
 }
