@@ -134,6 +134,9 @@ export const posts: Post[] = [
     descricao: "Quando ir pra Orlando pra fugir da multidão e pagar menos: clima mês a mês, época de férias escolares americanas e os períodos mais caros do ano.",
     categoria: "Orlando · Planejamento",
     data: "2026-09-13",
+    imagem: "/blog/melhor-epoca-para-viajar.jpg",
+    imagemAlt:
+      "Ilustração de um casal de costas caminhando com malas sob um guarda-chuva, numa chuva leve ao pôr do sol em Orlando",
   },
   {
     slug: "onde-ficar-em-orlando",
@@ -188,7 +191,7 @@ export const posts: Post[] = [
     data: "2026-09-13",
     imagem: "/blog/seguro-viagem.jpg",
     imagemAlt:
-      "Ilustração de um casal com malas sob um guarda-chuva numa chuva leve de verão, com palmeiras ao fundo",
+      "Ilustração de uma família de costas com malas e passaportes num saguão de aeroporto, olhando um painel de voos com um avião ao fundo",
   },
   {
     slug: "voo-direto-ou-conexao",
