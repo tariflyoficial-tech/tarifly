@@ -68,7 +68,14 @@ export default function ComoEconomizar() {
             <li>
               Café da manhã e ao menos uma refeição por dia feitos na
               hospedagem (supermercado americano costuma ser bem mais barato
-              que restaurante turístico).
+              que restaurante turístico — veja{" "}
+              <Link
+                href="/destinos/orlando/supermercado-em-orlando"
+                className="text-brand hover:underline"
+              >
+                onde comprar e o que levar
+              </Link>
+              ).
             </li>
             <li>
               Levar squeeze/garrafa reutilizável — os parques costumam ter

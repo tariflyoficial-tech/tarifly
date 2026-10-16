@@ -18,12 +18,23 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "supermercado-em-orlando",
+    destino: "orlando",
+    titulo: "Supermercado em Orlando: onde comprar e o que levar pra casa",
+    descricao: "Onde fazer as compras do dia a dia em Orlando: diferenças entre Publix, Walmart e Target, o que comprar na chegada, como economizar nas refeições e o que levar do Brasil.",
+    categoria: "Orlando · Orçamento",
+    data: "2026-10-16",
+  },
+  {
     slug: "orlando-com-criancas",
     destino: "orlando",
     titulo: "Orlando com crianças: o que saber antes de ir",
     descricao: "O que saber antes de ir pra Orlando com crianças: documentos e autorização de viagem, altura mínima nas atrações, ritmo dos dias, cadeirinha no carro e onde ficar.",
     categoria: "Orlando · Família",
     data: "2026-10-16",
+    imagem: "/blog/orlando-com-criancas.jpg",
+    imagemAlt:
+      "Ilustração de uma família com duas crianças de costas, andando de mãos dadas por uma calçada ensolarada com palmeiras em Orlando",
   },
   {
     slug: "roteiro-7-dias",
