@@ -45,7 +45,7 @@ Site comparador de viagens (voos e hospedagem) no modelo "metabusca" (igual Skys
 - `app/lib/site.ts` — `SITE_URL` (`https://tarifly.com.br`) e `SITE_NAME`.
 - `app/lib/posts.ts` — **lista central dos artigos do blog** (ver seção "Blog").
 - `app/destinos/` — o blog (URLs `/destinos/...` mantidas de propósito; o menu chama "Blog"). Tem `layout.tsx` próprio (tema editorial, cabeçalho, rodapé), `page.tsx` (índice) e `orlando/` (guia principal + artigos).
-- `app/components/`: `ArticleJsonLd` (schema Article + BreadcrumbList), `PostMeta` (data de publicação + capa), `BuscarCTA`, `PlaceAutocomplete`, `SearchWidget`.
+- `app/components/`: `ArticleJsonLd` (schema Article + BreadcrumbList), `PostMeta` (data de publicação + capa), `BuscarCTA`, `VistoCTA` (chamada pro visto, link externo pra rotaconsular.com.br), `MaisLidas` (3 artigos com capa no fim da leitura), `PlaceAutocomplete`, `SearchWidget`.
 
 ## Modelo de negócio (Travelpayouts)
 
@@ -64,7 +64,7 @@ Site comparador de viagens (voos e hospedagem) no modelo "metabusca" (igual Skys
 1. **Search Console**: confirmar que o `sitemap.xml` foi enviado (aba "Sitemaps") e pedir indexação (Inspeção de URL → "Solicitar indexação") dos artigos mais novos, em especial `roteiro-7-dias`, `outlets-em-orlando`, `orlando-com-criancas` e `supermercado-em-orlando`.
 2. **Publicar com frequência**: ritmo sugerido de 1 artigo por semana. Próximo da fila: **clima de Orlando mês a mês e o que levar na mala**. Outras ideias: Disney Springs/CityWalk, Epic Universe, Orlando sem carro, Orlando em lua de mel/casal.
 3. **Revisar os "Destaques"** do blog com dados reais: em Search Console → Desempenho → Páginas, ver quais artigos recebem mais cliques e atualizar o `destaque: true` em `posts.ts`.
-4. **Link cruzado do `rota-consular`** apontando pro guia de Orlando (principal fonte de tráfego qualificado; é só um link externo, sem integração técnica).
+4. **Link cruzado do `rota-consular`**: o sentido Tarifly → Rota Consular **já existe** (chamada `VistoCTA` no fim de cada artigo). **Falta o sentido contrário**: um link no site do Rota Consular apontando pro guia de Orlando (principal fonte de tráfego qualificado; é só um link externo, sem integração técnica). Essa tarefa é feita no repositório do `rota-consular`, não neste.
 5. **Tráfego fora do Google**: Pinterest, YouTube Shorts, grupos de viagem pra Orlando.
 6. **Quando houver tráfego estável (~3 meses)**: clicar em "Submeter para revisão" no painel da Travelpayouts (Booking.com e Trip.com) e, se aprovar, implementar o link de afiliado (formato `https://tp.media/r?marker=X&p=Y&u=<url-encoded>`, precisa também de um `aid` da Booking.com) na aba Hospedagem e dentro dos artigos `onde-ficar-em-orlando` e `casa-de-temporada-ou-hotel`.
 7. **Decidir a busca de voos**: reativar o Aviasales (funciona, mas sem português/Real), esperar o Trip.com, ou usar só links dentro dos artigos.
@@ -96,13 +96,18 @@ Site comparador de viagens (voos e hospedagem) no modelo "metabusca" (igual Skys
 20. **Seção "Destaques"** no índice do blog (6 artigos fixos): `quanto-custa-uma-viagem`, `roteiro-7-dias`, `melhor-epoca-para-viajar`, `quando-comprar-passagem`, `onde-ficar-em-orlando`, `ingressos-dos-parques`. Escolhidos pela intenção de busca provável, **ainda sem dados reais**.
 21. **Push**: o `gh` estava logado na conta errada (`2ntraveloficial-coder`, erro 403). Funciona logado como `tariflyoficial-tech` (`gh auth status` mostra qual está ativa).
 
+22. **Chamada pro visto americano (16/10/2026)**: componente `app/components/VistoCTA.tsx`, **uma única** no fim de cada artigo de Orlando e do guia, logo abaixo do `BuscarCTA`. Modelo menor e mais leve que o de passagem, com as cores da bandeira dos EUA (faixa azul `#0A3161` e vermelha `#B31942` no topo, botão azul), link `https://rotaconsular.com.br/` em nova aba (`rel="noopener noreferrer"`). Antes havia também uma versão no meio dos artigos; foi removida a pedido. As seções de visto do guia (`orlando/page.tsx`) e de `erros-comuns` também linkam a Rota Consular no texto.
+23. **Bloco "Mais lidas" (16/10/2026)**: `app/components/MaisLidas.tsx`, 3 cards com capa no fim de cada artigo, acima do "Veja também". Lista manual `maisLidasSlugs` em `app/lib/posts.ts` (quanto-custa-uma-viagem, onde-ficar-em-orlando, quando-comprar-passagem, roteiro-7-dias, melhor-epoca-para-viajar); mostra os 3 primeiros que não sejam o artigo atual. **Sem dados reais de leitura**: trocar pelos mais lidos de verdade quando houver Search Console/Analytics. Cada artigo recebe `<MaisLidas slug="..." />` (o guia principal `orlando/page.tsx` não tem).
+24. **Menu do topo da home (16/10/2026)**: `app/page.tsx`. Cabeçalho sticky, logo centralizado e links centralizados logo abaixo, "Blog" em botão laranja de destaque; os links agora aparecem também no celular (antes ficavam escondidos). Âncoras `#busca` e `#como-funciona` com `scroll-mt-32` por causa do cabeçalho fixo. O cabeçalho do layout do blog (`app/destinos/layout.tsx`, fundo bege) **não** foi alterado.
+25. **Commits do dia (16/10/2026)**: `a6b1d44` e `276a0d7` (chamadas de visto), `635e08d` (Mais lidas), `ab5437f` (menu da home). Tudo na `main` e publicado.
+
 ## Blog: como funciona e como publicar um artigo novo
 
 Tudo sai de `app/lib/posts.ts` (índice, datas, capas, sitemap, schema.org). Passo a passo:
 
 1. Criar `app/destinos/orlando/<slug>/page.tsx` copiando a estrutura de um artigo existente (ex.: `outlets-em-orlando`): `metadata` (title terminando em " — Tarifly" + description), `<ArticleJsonLd metadata={metadata} path="/destinos/orlando/<slug>" />`, `<PostMeta slug="<slug>" />` logo abaixo do subtítulo, `BuscarCTA` no meio e no fim, links internos pros artigos relacionados.
 2. Adicionar a entrada **no topo** do array em `posts.ts`: `slug`, `destino`, `titulo`, `descricao`, `categoria` ("Orlando · Tema"), `data` (AAAA-MM-DD de hoje). Quando houver capa: `imagem: "/blog/<slug>.jpg"` e `imagemAlt` (começar com "Ilustração de...", pois as imagens são geradas por IA).
-3. Adicionar o artigo na lista `artigosRelacionados` de `app/destinos/orlando/page.tsx` e linkar a partir de 1-2 artigos relacionados.
+3. Adicionar o artigo na lista `artigosRelacionados` de `app/destinos/orlando/page.tsx` e linkar a partir de 1-2 artigos relacionados. No fim do artigo, manter esta ordem: `BuscarCTA`, `VistoCTA`, `<MaisLidas slug="<slug>" />` e o "Veja também".
 4. **Capa**: usuário salva `public/blog/<slug>.png` (às vezes vem como `<slug>.png.png`); eu converto com `sharp` (`resize(1600,900,{fit:"cover"}).jpeg({quality:82,mozjpeg:true})`) para `<slug>.jpg`. Só os JPGs vão pro Git, nunca os PNGs.
 5. Rodar `npx tsc --noEmit` e `npm run build`; conferir no navegador (desktop e celular); **só então pedir aprovação** pra commit e push.
 6. Sem capa, o card do blog mostra um bloco de cor com a categoria (funciona, mas prefira ter a imagem).
