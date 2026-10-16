@@ -75,6 +75,14 @@ export default function QuantosDias() {
             Uma semana é o ponto de equilíbrio mais comum entre "ver o
             essencial" e "não voltar exausto":
           </p>
+          <p className="mt-2 text-sm">
+            <Link
+              href="/destinos/orlando/roteiro-7-dias"
+              className="text-brand hover:underline"
+            >
+              Ver o roteiro de 7 dias dia a dia →
+            </Link>
+          </p>
           <ul className="mt-2 list-disc space-y-1 pl-5">
             <li>1 dia de chegada, sem parque (ajuste de fuso, check-in)</li>
             <li>4 dias de parques Disney (um por parque)</li>

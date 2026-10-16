@@ -14,6 +14,14 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "roteiro-7-dias",
+    destino: "orlando",
+    titulo: "Roteiro de 7 dias em Orlando",
+    descricao: "Roteiro de 7 dias em Orlando, dia a dia: quais parques da Disney e da Universal encaixar, onde colocar o dia livre e como adaptar pra 5 ou 10 dias.",
+    categoria: "Orlando · Roteiro",
+    data: "2026-10-15",
+  },
+  {
     slug: "outlets-em-orlando",
     destino: "orlando",
     titulo: "Outlets em Orlando: o que saber antes de ir",
