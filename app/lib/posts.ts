@@ -24,6 +24,9 @@ export const posts: Post[] = [
     descricao: "Onde fazer as compras do dia a dia em Orlando: diferenças entre Publix, Walmart e Target, o que comprar na chegada, como economizar nas refeições e o que levar do Brasil.",
     categoria: "Orlando · Orçamento",
     data: "2026-10-16",
+    imagem: "/blog/supermercado-em-orlando.jpg",
+    imagemAlt:
+      "Ilustração de uma família de costas empurrando um carrinho de compras num corredor de supermercado, com frutas e água nas prateleiras",
   },
   {
     slug: "orlando-com-criancas",
