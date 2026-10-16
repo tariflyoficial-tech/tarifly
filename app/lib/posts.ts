@@ -18,6 +18,14 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "orlando-com-criancas",
+    destino: "orlando",
+    titulo: "Orlando com crianças: o que saber antes de ir",
+    descricao: "O que saber antes de ir pra Orlando com crianças: documentos e autorização de viagem, altura mínima nas atrações, ritmo dos dias, cadeirinha no carro e onde ficar.",
+    categoria: "Orlando · Família",
+    data: "2026-10-16",
+  },
+  {
     slug: "roteiro-7-dias",
     destino: "orlando",
     titulo: "Roteiro de 7 dias em Orlando",

@@ -7,6 +7,7 @@ const artigosRelacionados = [
   { slug: "quanto-custa-uma-viagem", titulo: "Quanto custa uma viagem pra Orlando" },
   { slug: "quantos-dias-ficar", titulo: "Quantos dias ficar em Orlando" },
   { slug: "roteiro-7-dias", titulo: "Roteiro de 7 dias em Orlando" },
+  { slug: "orlando-com-criancas", titulo: "Orlando com crianças: o que saber antes de ir" },
   { slug: "erros-comuns", titulo: "Erros comuns de quem vai pela primeira vez" },
   { slug: "como-economizar", titulo: "Como economizar sem abrir mão dos parques" },
   { slug: "quando-comprar-passagem", titulo: "Quando comprar passagem pra Orlando" },

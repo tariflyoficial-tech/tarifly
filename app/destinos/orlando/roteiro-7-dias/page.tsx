@@ -238,7 +238,15 @@ export default function Roteiro7Dias() {
             </li>
             <li>
               <strong>Com criança pequena:</strong> reduza pra um parque por
-              dia, nunca dois, e deixe a tarde livre pra descanso.
+              dia, nunca dois, e deixe a tarde livre pra descanso. Veja mais
+              em{" "}
+              <Link
+                href="/destinos/orlando/orlando-com-criancas"
+                className="text-brand hover:underline"
+              >
+                Orlando com crianças
+              </Link>
+              .
             </li>
           </ul>
         </section>
