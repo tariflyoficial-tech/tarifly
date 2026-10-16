@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
-import PostDate from "../../../components/PostDate";
+import PostMeta from "../../../components/PostMeta";
 
 export const metadata: Metadata = {
   title: "Voo direto ou com conexão pra Orlando: vale a pena a diferença? — Tarifly",
@@ -30,7 +30,7 @@ export default function VooDiretoOuConexao() {
       <p className="mt-3 text-base text-gray-500">
         A resposta depende de quanto sua paciência vale em dinheiro.
       </p>
-      <PostDate slug="voo-direto-ou-conexao" />
+      <PostMeta slug="voo-direto-ou-conexao" />
 
       <div className="mt-10 space-y-8 text-[15px] leading-relaxed text-gray-700">
         <section>

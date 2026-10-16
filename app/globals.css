@@ -24,3 +24,41 @@ body {
   background: var(--background);
   color: var(--foreground);
 }
+
+/* Tema editorial do blog (/destinos/**): bege, marrom e terracota.
+   Reaproveita as mesmas classes dos artigos sobrescrevendo as variáveis de cor
+   só dentro do wrapper, então home e busca continuam azul e laranja. */
+.blog-theme {
+  --background: #f5eee4;
+  --foreground: #3a2a1f;
+  --brand: #3a2a1f;
+  --brand-dark: #2b1d14;
+  --accent: #b4572f;
+  --accent-dark: #9a4724;
+  --color-gray-900: #2b1d14;
+  --color-gray-700: #4d3b2f;
+  --color-gray-500: #7d6a5c;
+  --color-gray-400: #9c8878;
+  --color-gray-100: #e3d8c8;
+  --color-white: #fbf7f1;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.blog-theme h1,
+.blog-theme h2,
+.blog-theme h3 {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+
+.blog-theme article h1 {
+  font-size: clamp(2.25rem, 6.5vw, 3.5rem);
+  line-height: 1.05;
+}
+
+.blog-theme article h2 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}

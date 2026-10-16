@@ -10,6 +10,10 @@ export type Post = {
   categoria: string;
   data: string;
   atualizado?: string;
+  // Foto de capa em public/blog/ (ex.: "/blog/roteiro-7-dias.jpg"). Sem ela, o
+  // blog mostra um bloco de cor no lugar.
+  imagem?: string;
+  imagemAlt?: string;
 };
 
 export const posts: Post[] = [

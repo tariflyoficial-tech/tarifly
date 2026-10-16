@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
-import PostDate from "../../../components/PostDate";
+import PostMeta from "../../../components/PostMeta";
 
 export const metadata: Metadata = {
   title: "Onde ficar em Orlando: guia completo de bairros — Tarifly",
@@ -30,7 +30,7 @@ export default function OndeFicarEmOrlando() {
       <p className="mt-3 text-base text-gray-500">
         O bairro certo depende mais do seu roteiro do que do seu orçamento.
       </p>
-      <PostDate slug="onde-ficar-em-orlando" />
+      <PostMeta slug="onde-ficar-em-orlando" />
 
       <div className="mt-10 space-y-8 text-[15px] leading-relaxed text-gray-700">
         <section>
