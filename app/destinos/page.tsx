@@ -63,7 +63,11 @@ function Meta({ post }: { post: Post }) {
 }
 
 export default function Blog() {
-  const [destaque, ...resto] = maisRecentes;
+  const [destaque] = maisRecentes;
+  const destaques = maisRecentes.filter((p) => p.destaque && p !== destaque);
+  const resto = maisRecentes.filter(
+    (p) => p !== destaque && !p.destaque,
+  );
 
   return (
     <div className="mx-auto max-w-5xl px-6 pb-20 pt-6">
@@ -101,6 +105,32 @@ export default function Blog() {
           </span>
         </div>
       </Link>
+
+      <div className="mt-16 border-t border-gray-100 pt-6">
+        <h2 className="text-2xl text-gray-900">Destaques</h2>
+        <p className="mt-1 text-sm text-gray-500">
+          Por onde começar o planejamento da sua viagem.
+        </p>
+      </div>
+
+      <ul className="mt-8 grid gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+        {destaques.map((p, i) => (
+          <li key={`${p.destino}/${p.slug}`}>
+            <Link
+              href={`/destinos/${p.destino}/${p.slug}`}
+              className="group block"
+            >
+              <Capa post={p} indice={i + 2} className="aspect-[16/10] rounded-xl" />
+              <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-accent">
+                {p.categoria.split("·").pop()?.trim()}
+              </p>
+              <h3 className="mt-1 text-lg leading-snug text-gray-900 group-hover:text-accent">
+                {p.titulo}
+              </h3>
+            </Link>
+          </li>
+        ))}
+      </ul>
 
       <div className="mt-16 flex items-baseline justify-between border-t border-gray-100 pt-6">
         <h2 className="text-2xl text-gray-900">Mais artigos</h2>

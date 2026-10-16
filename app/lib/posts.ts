@@ -10,6 +10,8 @@ export type Post = {
   categoria: string;
   data: string;
   atualizado?: string;
+  // Aparece na seção "Destaques" do blog. Revise com os dados do Search Console.
+  destaque?: boolean;
   // Foto de capa em public/blog/ (ex.: "/blog/roteiro-7-dias.jpg"). Sem ela, o
   // blog mostra um bloco de cor no lugar.
   imagem?: string;
@@ -46,6 +48,7 @@ export const posts: Post[] = [
     descricao: "Roteiro de 7 dias em Orlando, dia a dia: quais parques da Disney e da Universal encaixar, onde colocar o dia livre e como adaptar pra 5 ou 10 dias.",
     categoria: "Orlando · Roteiro",
     data: "2026-10-15",
+    destaque: true,
     imagem: "/blog/roteiro-7-dias.jpg",
     imagemAlt:
       "Ilustração de uma família de costas olhando um lago em Orlando ao pôr do sol, com parques ao fundo",
@@ -145,6 +148,7 @@ export const posts: Post[] = [
     descricao: "Comprar o ingresso dos parques de Orlando antes de viajar ou na chegada, e se vale a pena arriscar revenda ou promoção de terceiros.",
     categoria: "Orlando · Parques",
     data: "2026-09-13",
+    destaque: true,
     imagem: "/blog/ingressos-dos-parques.jpg",
     imagemAlt:
       "Ilustração de uma mão segurando ingressos coloridos diante da entrada de um parque temático",
@@ -156,6 +160,7 @@ export const posts: Post[] = [
     descricao: "Quando ir pra Orlando pra fugir da multidão e pagar menos: clima mês a mês, época de férias escolares americanas e os períodos mais caros do ano.",
     categoria: "Orlando · Planejamento",
     data: "2026-09-13",
+    destaque: true,
     imagem: "/blog/melhor-epoca-para-viajar.jpg",
     imagemAlt:
       "Ilustração de um casal de costas caminhando com malas sob um guarda-chuva, numa chuva leve ao pôr do sol em Orlando",
@@ -167,6 +172,7 @@ export const posts: Post[] = [
     descricao: "Lake Buena Vista, International Drive ou Kissimmee? Guia detalhado dos bairros de Orlando pra escolher onde ficar de acordo com seu roteiro e orçamento.",
     categoria: "Orlando · Hospedagem",
     data: "2026-09-13",
+    destaque: true,
     imagem: "/blog/onde-ficar-em-orlando.jpg",
     imagemAlt:
       "Ilustração de uma vista aérea de Orlando ao entardecer, com bairros residenciais, lagos e hotéis ao longe",
@@ -178,6 +184,7 @@ export const posts: Post[] = [
     descricao: "Com quantos meses de antecedência comprar passagem pra Orlando, como o preço se comporta ao longo do tempo e quando vale a pena esperar ou não.",
     categoria: "Orlando · Passagem aérea",
     data: "2026-09-13",
+    destaque: true,
     imagem: "/blog/quando-comprar-passagem.jpg",
     imagemAlt:
       "Ilustração da asa de um avião vista pela janela, com nuvens iluminadas pelo sol nascente",
@@ -189,6 +196,7 @@ export const posts: Post[] = [
     descricao: "As categorias de gasto que realmente pesam numa viagem pra Orlando — passagem, hospedagem, ingresso, carro e alimentação — e onde dá pra cortar sem perder a viagem.",
     categoria: "Orlando · Orçamento",
     data: "2026-09-13",
+    destaque: true,
     imagem: "/blog/quanto-custa-uma-viagem.jpg",
     imagemAlt:
       "Ilustração de uma mesa com mapa-múndi, passaporte, notas de dólar, calculadora e uma xícara de café",
