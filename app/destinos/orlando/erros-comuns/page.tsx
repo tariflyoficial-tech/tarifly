@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
+import VistoCTA from "../../../components/VistoCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
 import PostMeta from "../../../components/PostMeta";
 
@@ -41,7 +42,16 @@ export default function ErrosComuns() {
           <p className="mt-2">
             Brasil não tem isenção de visto pros EUA — sem o visto de turista
             aprovado, nada mais importa. Comece por aí antes de gastar tempo
-            comparando passagem e hotel.
+            comparando passagem e hotel. Dá pra solicitar o visto pela{" "}
+            <a
+              href="https://rotaconsular.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand hover:underline"
+            >
+              Rota Consular
+            </a>
+            .
           </p>
         </section>
 
@@ -61,6 +71,8 @@ export default function ErrosComuns() {
             antes de fechar o roteiro.
           </p>
         </section>
+
+        <VistoCTA compact />
 
         <BuscarCTA compact title="Evite pagar mais por comprar em cima da hora" />
 
@@ -115,6 +127,8 @@ export default function ErrosComuns() {
         title="Comece pelo que já dá pra resolver agora"
         subtitle="Compare o preço da passagem antes de qualquer outra decisão."
       />
+
+      <VistoCTA />
 
       <p className="mt-8 text-sm text-gray-400">
         Veja também:{" "}

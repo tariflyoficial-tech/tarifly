@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
+import VistoCTA from "../../../components/VistoCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
 import PostMeta from "../../../components/PostMeta";
 
@@ -76,6 +77,8 @@ export default function MelhorEpoca() {
           </p>
         </section>
 
+        <VistoCTA compact />
+
         <BuscarCTA compact title="Já sabe quando quer ir? Compare as passagens" />
 
         <section>
@@ -117,6 +120,8 @@ export default function MelhorEpoca() {
       </div>
 
       <BuscarCTA />
+
+      <VistoCTA />
 
       <p className="mt-8 text-sm text-gray-400">
         Veja também:{" "}

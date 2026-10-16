@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
+import VistoCTA from "../../../components/VistoCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
 import PostMeta from "../../../components/PostMeta";
 
@@ -58,6 +59,8 @@ export default function VooDiretoOuConexao() {
           </ul>
         </section>
 
+        <VistoCTA compact />
+
         <BuscarCTA compact title="Compare voos diretos e com conexão lado a lado" />
 
         <section>
@@ -87,6 +90,8 @@ export default function VooDiretoOuConexao() {
       </div>
 
       <BuscarCTA />
+
+      <VistoCTA />
 
       <p className="mt-8 text-sm text-gray-400">
         Veja também:{" "}

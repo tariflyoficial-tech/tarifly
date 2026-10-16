@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
+import VistoCTA from "../../../components/VistoCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
 import PostMeta from "../../../components/PostMeta";
 
@@ -57,6 +58,8 @@ export default function ComoEconomizar() {
             fora todo dia.
           </p>
         </section>
+
+        <VistoCTA compact />
 
         <BuscarCTA compact title="Compare hospedagem em grupo e economize por pessoa" />
 
@@ -120,6 +123,8 @@ export default function ComoEconomizar() {
         title="Comece pela passagem — é onde a economia pesa mais"
         subtitle="Compare preços reais antes de fechar qualquer coisa."
       />
+
+      <VistoCTA />
 
       <p className="mt-8 text-sm text-gray-400">
         Veja também:{" "}

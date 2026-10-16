@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
+import VistoCTA from "../../../components/VistoCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
 import PostMeta from "../../../components/PostMeta";
 
@@ -87,6 +88,8 @@ export default function SupermercadoEmOrlando() {
             <li>Itens de higiene que você esqueceu de trazer</li>
           </ul>
         </section>
+
+        <VistoCTA compact />
 
         <BuscarCTA compact title="Ainda sem passagem? Veja o preço pra sua data" />
 
@@ -189,6 +192,8 @@ export default function SupermercadoEmOrlando() {
         title="Gastando menos no dia a dia? Veja o preço da passagem"
         subtitle="Compare sem sair do site."
       />
+
+      <VistoCTA />
 
       <p className="mt-8 text-sm text-gray-400">
         Veja também:{" "}

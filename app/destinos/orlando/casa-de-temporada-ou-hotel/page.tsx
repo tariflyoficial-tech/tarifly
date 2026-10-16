@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
+import VistoCTA from "../../../components/VistoCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
 import PostMeta from "../../../components/PostMeta";
 
@@ -69,6 +70,8 @@ export default function CasaOuHotel() {
           </ul>
         </section>
 
+        <VistoCTA compact />
+
         <BuscarCTA compact title="Compare hotéis e opções de hospedagem em Orlando" />
 
         <section>
@@ -89,6 +92,8 @@ export default function CasaOuHotel() {
         title="Veja preços reais dos dois formatos"
         subtitle="Compare hotel e hospedagem em grupo antes de decidir."
       />
+
+      <VistoCTA />
 
       <p className="mt-8 text-sm text-gray-400">
         Veja também:{" "}

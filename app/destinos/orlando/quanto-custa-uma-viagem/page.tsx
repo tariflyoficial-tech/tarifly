@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
+import VistoCTA from "../../../components/VistoCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
 import PostMeta from "../../../components/PostMeta";
 
@@ -71,6 +72,8 @@ export default function QuantoCusta() {
           </ul>
         </section>
 
+        <VistoCTA compact />
+
         <BuscarCTA compact title="Antes de fechar o orçamento, veja o preço real da passagem" />
 
         <section>
@@ -112,6 +115,8 @@ export default function QuantoCusta() {
         title="Comece pela conta que você já pode fechar"
         subtitle="Compare o preço real da passagem e da hospedagem agora."
       />
+
+      <VistoCTA />
 
       <p className="mt-8 text-sm text-gray-400">
         Veja também:{" "}

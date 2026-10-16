@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
+import VistoCTA from "../../../components/VistoCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
 import PostMeta from "../../../components/PostMeta";
 
@@ -65,6 +66,8 @@ export default function OndeFicarEmOrlando() {
           </p>
         </section>
 
+        <VistoCTA compact />
+
         <BuscarCTA compact title="Ache sua hospedagem em qualquer um desses bairros" />
 
         <section>
@@ -107,6 +110,8 @@ export default function OndeFicarEmOrlando() {
         title="Compare hospedagem nesses bairros agora"
         subtitle="Veja preços reais antes de decidir onde ficar."
       />
+
+      <VistoCTA />
 
       <p className="mt-8 text-sm text-gray-400">
         Veja também:{" "}

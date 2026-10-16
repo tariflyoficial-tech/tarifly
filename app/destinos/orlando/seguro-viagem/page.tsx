@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
+import VistoCTA from "../../../components/VistoCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
 import PostMeta from "../../../components/PostMeta";
 
@@ -61,6 +62,8 @@ export default function SeguroViagem() {
           </p>
         </section>
 
+        <VistoCTA compact />
+
         <BuscarCTA compact title="Resolvido o seguro? Agora é hora de comparar a passagem" />
 
         <section>
@@ -90,6 +93,8 @@ export default function SeguroViagem() {
       </div>
 
       <BuscarCTA />
+
+      <VistoCTA />
 
       <p className="mt-8 text-sm text-gray-400">
         Veja também:{" "}

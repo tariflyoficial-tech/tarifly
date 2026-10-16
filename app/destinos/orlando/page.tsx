@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../components/BuscarCTA";
+import VistoCTA from "../../components/VistoCTA";
 
 const artigosRelacionados = [
   { slug: "melhor-epoca-para-viajar", titulo: "Melhor época pra viajar pra Orlando" },
@@ -60,7 +61,17 @@ export default function GuiaOrlando() {
             durar anos depois de aprovado (então geralmente é um processo que
             você faz uma vez só). Vale resolver isso antes de comprar
             qualquer coisa — passagem e hospedagem só valem a pena reservar
-            depois que o visto está encaminhado.
+            depois que o visto está encaminhado. Se ainda não começou, dá pra
+            solicitar o visto de turista pela{" "}
+            <a
+              href="https://rotaconsular.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand hover:underline"
+            >
+              Rota Consular
+            </a>
+            .
           </p>
         </section>
 
@@ -125,6 +136,8 @@ export default function GuiaOrlando() {
           </p>
         </section>
 
+        <VistoCTA compact />
+
         <BuscarCTA compact title="Já viu o essencial? Compare o preço da sua passagem" />
 
         <section>
@@ -147,6 +160,8 @@ export default function GuiaOrlando() {
       </div>
 
       <BuscarCTA />
+
+      <VistoCTA />
     </div>
   );
 }

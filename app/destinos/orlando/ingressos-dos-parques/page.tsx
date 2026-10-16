@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
+import VistoCTA from "../../../components/VistoCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
 import PostMeta from "../../../components/PostMeta";
 
@@ -65,6 +66,8 @@ export default function IngressosDosParques() {
           </p>
         </section>
 
+        <VistoCTA compact />
+
         <BuscarCTA compact title="Já sabe as datas de parque? Veja o preço da passagem" />
 
         <section>
@@ -95,6 +98,8 @@ export default function IngressosDosParques() {
       </div>
 
       <BuscarCTA />
+
+      <VistoCTA />
 
       <p className="mt-8 text-sm text-gray-400">
         Veja também:{" "}
