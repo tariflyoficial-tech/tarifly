@@ -65,8 +65,6 @@ export default function ForaDosParques() {
           </p>
         </section>
 
-        <VistoCTA compact />
-
         <BuscarCTA compact title="Enquanto planeja os dias livres, compare sua passagem" />
 
         <section>

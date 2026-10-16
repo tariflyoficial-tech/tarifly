@@ -72,8 +72,6 @@ export default function ErrosComuns() {
           </p>
         </section>
 
-        <VistoCTA compact />
-
         <BuscarCTA compact title="Evite pagar mais por comprar em cima da hora" />
 
         <section>

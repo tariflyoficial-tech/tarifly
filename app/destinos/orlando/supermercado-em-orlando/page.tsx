@@ -89,8 +89,6 @@ export default function SupermercadoEmOrlando() {
           </ul>
         </section>
 
-        <VistoCTA compact />
-
         <BuscarCTA compact title="Ainda sem passagem? Veja o preço pra sua data" />
 
         <section>

@@ -136,8 +136,6 @@ export default function GuiaOrlando() {
           </p>
         </section>
 
-        <VistoCTA compact />
-
         <BuscarCTA compact title="Já viu o essencial? Compare o preço da sua passagem" />
 
         <section>

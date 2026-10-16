@@ -59,8 +59,6 @@ export default function ComoEconomizar() {
           </p>
         </section>
 
-        <VistoCTA compact />
-
         <BuscarCTA compact title="Compare hospedagem em grupo e economize por pessoa" />
 
         <section>

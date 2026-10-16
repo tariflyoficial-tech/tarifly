@@ -60,8 +60,6 @@ export default function ChipEInternet() {
           </p>
         </section>
 
-        <VistoCTA compact />
-
         <BuscarCTA compact title="Enquanto resolve a internet, compare sua passagem" />
 
         <section>

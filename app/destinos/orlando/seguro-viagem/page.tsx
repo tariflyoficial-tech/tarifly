@@ -62,8 +62,6 @@ export default function SeguroViagem() {
           </p>
         </section>
 
-        <VistoCTA compact />
-
         <BuscarCTA compact title="Resolvido o seguro? Agora é hora de comparar a passagem" />
 
         <section>

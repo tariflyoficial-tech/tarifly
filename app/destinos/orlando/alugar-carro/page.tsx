@@ -63,8 +63,6 @@ export default function AlugarCarro() {
           </p>
         </section>
 
-        <VistoCTA compact />
-
         <BuscarCTA compact title="Já decidiu alugar carro? Veja o preço da passagem" />
 
         <section>

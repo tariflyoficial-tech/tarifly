@@ -77,8 +77,6 @@ export default function MelhorEpoca() {
           </p>
         </section>
 
-        <VistoCTA compact />
-
         <BuscarCTA compact title="Já sabe quando quer ir? Compare as passagens" />
 
         <section>

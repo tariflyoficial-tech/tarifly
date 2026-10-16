@@ -59,8 +59,6 @@ export default function VooDiretoOuConexao() {
           </ul>
         </section>
 
-        <VistoCTA compact />
-
         <BuscarCTA compact title="Compare voos diretos e com conexão lado a lado" />
 
         <section>

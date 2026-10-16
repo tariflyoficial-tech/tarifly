@@ -95,8 +95,6 @@ export default function OutletsEmOrlando() {
           </p>
         </section>
 
-        <VistoCTA compact />
-
         <BuscarCTA compact title="Vai com mala vazia? Compare o preço da passagem" />
 
         <section>

@@ -137,8 +137,6 @@ export default function Roteiro7Dias() {
           </div>
         </section>
 
-        <VistoCTA compact />
-
         <BuscarCTA compact title="Montando o roteiro? Veja o preço da passagem" />
 
         <section>

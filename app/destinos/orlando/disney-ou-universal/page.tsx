@@ -61,8 +61,6 @@ export default function DisneyOuUniversal() {
           </p>
         </section>
 
-        <VistoCTA compact />
-
         <BuscarCTA compact title="Decidiu? Veja o preço da passagem pra sua data" />
 
         <section>

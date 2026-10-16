@@ -66,8 +66,6 @@ export default function IngressosDosParques() {
           </p>
         </section>
 
-        <VistoCTA compact />
-
         <BuscarCTA compact title="Já sabe as datas de parque? Veja o preço da passagem" />
 
         <section>

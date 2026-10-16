@@ -87,8 +87,6 @@ export default function OrlandoComCriancas() {
           </p>
         </section>
 
-        <VistoCTA compact />
-
         <BuscarCTA compact title="Planejando com a família? Veja o preço da passagem" />
 
         <section>

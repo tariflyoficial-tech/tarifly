@@ -63,8 +63,6 @@ export default function QuandoComprarPassagem() {
           </p>
         </section>
 
-        <VistoCTA compact />
-
         <BuscarCTA compact title="Já sabe a data? Veja o preço de hoje pra ela" />
 
         <section>

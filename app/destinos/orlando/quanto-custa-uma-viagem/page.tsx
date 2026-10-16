@@ -72,8 +72,6 @@ export default function QuantoCusta() {
           </ul>
         </section>
 
-        <VistoCTA compact />
-
         <BuscarCTA compact title="Antes de fechar o orçamento, veja o preço real da passagem" />
 
         <section>

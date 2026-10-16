@@ -66,8 +66,6 @@ export default function OndeFicarEmOrlando() {
           </p>
         </section>
 
-        <VistoCTA compact />
-
         <BuscarCTA compact title="Ache sua hospedagem em qualquer um desses bairros" />
 
         <section>

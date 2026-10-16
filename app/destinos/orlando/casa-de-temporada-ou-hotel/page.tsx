@@ -70,8 +70,6 @@ export default function CasaOuHotel() {
           </ul>
         </section>
 
-        <VistoCTA compact />
-
         <BuscarCTA compact title="Compare hotéis e opções de hospedagem em Orlando" />
 
         <section>

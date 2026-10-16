@@ -66,8 +66,6 @@ export default function QuantosDias() {
           </ul>
         </section>
 
-        <VistoCTA compact />
-
         <BuscarCTA compact title="Já sabe o número de dias? Veja as datas mais baratas pra voar" />
 
         <section>
