@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
+import PostDate from "../../../components/PostDate";
 
 export const metadata: Metadata = {
   title: "Quando comprar passagem pra Orlando: antecedência ideal — Tarifly",
@@ -30,6 +31,7 @@ export default function QuandoComprarPassagem() {
         Não é só "quanto antes, melhor" — tem uma janela específica que
         costuma dar o melhor equilíbrio.
       </p>
+      <PostDate slug="quando-comprar-passagem" />
 
       <div className="mt-10 space-y-8 text-[15px] leading-relaxed text-gray-700">
         <section>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
+import PostDate from "../../../components/PostDate";
 
 export const metadata: Metadata = {
   title: "Seguro viagem pra Orlando: é obrigatório? O que cobre — Tarifly",
@@ -30,6 +31,7 @@ export default function SeguroViagem() {
         Não é exigido por lei — mas é uma das decisões mais caras de errar se
         você pular essa parte.
       </p>
+      <PostDate slug="seguro-viagem" />
 
       <div className="mt-10 space-y-8 text-[15px] leading-relaxed text-gray-700">
         <section>

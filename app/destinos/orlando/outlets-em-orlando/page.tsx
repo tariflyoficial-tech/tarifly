@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
+import PostDate from "../../../components/PostDate";
 
 export const metadata: Metadata = {
   title: "Outlets em Orlando: quais são, quando ir e como não estourar a cota — Tarifly",
@@ -31,6 +32,7 @@ export default function OutletsEmOrlando() {
         Dá pra aproveitar bem sem estourar o orçamento nem a cota da
         alfândega.
       </p>
+      <PostDate slug="outlets-em-orlando" />
 
       <div className="mt-10 space-y-8 text-[15px] leading-relaxed text-gray-700">
         <section>

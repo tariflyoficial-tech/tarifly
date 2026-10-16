@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
+import PostDate from "../../../components/PostDate";
 
 export const metadata: Metadata = {
   title: "Disney ou Universal: qual escolher se só der pra ir num — Tarifly",
@@ -30,6 +31,7 @@ export default function DisneyOuUniversal() {
         São experiências bem diferentes — a escolha certa depende de quem
         está na viagem.
       </p>
+      <PostDate slug="disney-ou-universal" />
 
       <div className="mt-10 space-y-8 text-[15px] leading-relaxed text-gray-700">
         <section>

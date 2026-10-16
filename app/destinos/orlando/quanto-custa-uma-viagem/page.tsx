@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
+import PostDate from "../../../components/PostDate";
 
 export const metadata: Metadata = {
   title: "Quanto custa uma viagem pra Orlando: onde vai seu dinheiro — Tarifly",
@@ -30,6 +31,7 @@ export default function QuantoCusta() {
         Não existe um número mágico — existe onde o seu dinheiro vai, e
         quanto de cada categoria você está disposto a gastar.
       </p>
+      <PostDate slug="quanto-custa-uma-viagem" />
 
       <div className="mt-10 space-y-8 text-[15px] leading-relaxed text-gray-700">
         <section>

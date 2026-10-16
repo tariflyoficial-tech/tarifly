@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
+import PostDate from "../../../components/PostDate";
 
 export const metadata: Metadata = {
   title: "Chip ou eSIM pra Orlando: qual escolher — Tarifly",
@@ -30,6 +31,7 @@ export default function ChipEInternet() {
         Você vai precisar de internet o tempo todo — pra mapa, tradutor,
         aplicativo do parque e Uber.
       </p>
+      <PostDate slug="chip-e-internet" />
 
       <div className="mt-10 space-y-8 text-[15px] leading-relaxed text-gray-700">
         <section>

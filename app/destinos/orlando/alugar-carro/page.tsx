@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
+import PostDate from "../../../components/PostDate";
 
 export const metadata: Metadata = {
   title: "Alugar carro em Orlando: documentos e seguro — Tarifly",
@@ -30,6 +31,7 @@ export default function AlugarCarro() {
         Quase obrigatório em Orlando — vale entender documento e seguro antes
         de chegar ao balcão.
       </p>
+      <PostDate slug="alugar-carro" />
 
       <div className="mt-10 space-y-8 text-[15px] leading-relaxed text-gray-700">
         <section>

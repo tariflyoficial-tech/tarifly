@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
+import PostDate from "../../../components/PostDate";
 
 export const metadata: Metadata = {
   title: "Casa de temporada ou hotel em Orlando: o que escolher — Tarifly",
@@ -30,6 +31,7 @@ export default function CasaOuHotel() {
         Não é sobre qual é "melhor" — é sobre qual combina com o tamanho do
         seu grupo e o seu roteiro.
       </p>
+      <PostDate slug="casa-de-temporada-ou-hotel" />
 
       <div className="mt-10 space-y-8 text-[15px] leading-relaxed text-gray-700">
         <section>

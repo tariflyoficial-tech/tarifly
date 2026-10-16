@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
+import PostDate from "../../../components/PostDate";
 
 export const metadata: Metadata = {
   title: "Como economizar em Orlando sem abrir mão dos parques — Tarifly",
@@ -30,6 +31,7 @@ export default function ComoEconomizar() {
         O ingresso do parque não tem muito desconto real — mas quase tudo ao
         redor dele tem.
       </p>
+      <PostDate slug="como-economizar" />
 
       <div className="mt-10 space-y-8 text-[15px] leading-relaxed text-gray-700">
         <section>

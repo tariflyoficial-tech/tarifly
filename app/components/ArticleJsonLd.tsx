@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getPost } from "../lib/posts";
 import { SITE_NAME, SITE_URL } from "../lib/site";
 
 // Dados estruturados (schema.org) do artigo, lidos do próprio `metadata` da
@@ -12,6 +13,7 @@ export default function ArticleJsonLd({
 }) {
   const url = `${SITE_URL}${path}`;
   const titulo = String(metadata.title).replace(/ — Tarifly$/, "");
+  const post = getPost("orlando", path.split("/").pop() ?? "");
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -21,6 +23,10 @@ export default function ArticleJsonLd({
         headline: titulo,
         description: metadata.description,
         inLanguage: "pt-BR",
+        ...(post && {
+          datePublished: post.data,
+          dateModified: post.atualizado ?? post.data,
+        }),
         mainEntityOfPage: url,
         author: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
         publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
@@ -32,7 +38,7 @@ export default function ArticleJsonLd({
           {
             "@type": "ListItem",
             position: 2,
-            name: "Guias de destino",
+            name: "Blog",
             item: `${SITE_URL}/destinos`,
           },
           {

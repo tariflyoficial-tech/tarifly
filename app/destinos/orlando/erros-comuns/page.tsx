@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
+import PostDate from "../../../components/PostDate";
 
 export const metadata: Metadata = {
   title: "Erros comuns de quem viaja pra Orlando pela primeira vez — Tarifly",
@@ -30,6 +31,7 @@ export default function ErrosComuns() {
         Nenhum é grave sozinho, mas juntos custam tempo e dinheiro que dava
         pra evitar.
       </p>
+      <PostDate slug="erros-comuns" />
 
       <div className="mt-10 space-y-8 text-[15px] leading-relaxed text-gray-700">
         <section>

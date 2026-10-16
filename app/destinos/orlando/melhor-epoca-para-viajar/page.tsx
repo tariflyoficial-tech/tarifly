@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
+import PostDate from "../../../components/PostDate";
 
 export const metadata: Metadata = {
   title: "Melhor época pra viajar pra Orlando: clima, multidão e preço — Tarifly",
@@ -30,6 +31,7 @@ export default function MelhorEpoca() {
         Clima, multidão nos parques e preço não andam sempre juntos — dá pra
         escolher em qual dos três você quer economizar.
       </p>
+      <PostDate slug="melhor-epoca-para-viajar" />
 
       <div className="prose-tarifly mt-10 space-y-8 text-[15px] leading-relaxed text-gray-700">
         <section>

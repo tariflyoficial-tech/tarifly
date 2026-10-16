@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
+import PostDate from "../../../components/PostDate";
 
 export const metadata: Metadata = {
   title: "Ingressos dos parques em Orlando: quando comprar — Tarifly",
@@ -30,6 +31,7 @@ export default function IngressosDosParques() {
         Comprar com antecedência quase sempre compensa — a dúvida real é
         outra.
       </p>
+      <PostDate slug="ingressos-dos-parques" />
 
       <div className="mt-10 space-y-8 text-[15px] leading-relaxed text-gray-700">
         <section>

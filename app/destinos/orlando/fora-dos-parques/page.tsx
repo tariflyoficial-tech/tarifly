@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
 import ArticleJsonLd from "../../../components/ArticleJsonLd";
+import PostDate from "../../../components/PostDate";
 
 export const metadata: Metadata = {
   title: "Orlando fora dos parques: o que fazer sem gastar ingresso — Tarifly",
@@ -30,6 +31,7 @@ export default function ForaDosParques() {
         Um roteiro só de parque cansa. Vale reservar pelo menos um dia sem
         ingresso.
       </p>
+      <PostDate slug="fora-dos-parques" />
 
       <div className="mt-10 space-y-8 text-[15px] leading-relaxed text-gray-700">
         <section>
