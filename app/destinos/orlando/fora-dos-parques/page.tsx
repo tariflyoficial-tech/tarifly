@@ -71,7 +71,14 @@ export default function ForaDosParques() {
           <p className="mt-2">
             Um dia de outlet costuma render tanto quanto um dia de parque em
             satisfação, principalmente pra quem vai comprar mala cheia. Veja
-            mais no guia específico de outlets.
+            mais no guia de{" "}
+            <Link
+              href="/destinos/orlando/outlets-em-orlando"
+              className="text-brand hover:underline"
+            >
+              outlets em Orlando
+            </Link>
+            .
           </p>
         </section>
 

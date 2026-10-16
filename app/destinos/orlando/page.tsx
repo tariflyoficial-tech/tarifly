@@ -15,6 +15,7 @@ const artigosRelacionados = [
   { slug: "disney-ou-universal", titulo: "Disney ou Universal: qual escolher" },
   { slug: "ingressos-dos-parques", titulo: "Ingressos dos parques: quando comprar" },
   { slug: "fora-dos-parques", titulo: "Orlando fora dos parques" },
+  { slug: "outlets-em-orlando", titulo: "Outlets em Orlando: o que saber antes de ir" },
   { slug: "alugar-carro", titulo: "Alugar carro em Orlando" },
   { slug: "seguro-viagem", titulo: "Seguro viagem pra Orlando" },
   { slug: "chip-e-internet", titulo: "Chip ou eSIM pra Orlando" },
