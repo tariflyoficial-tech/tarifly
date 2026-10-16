@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
+import ArticleJsonLd from "../../../components/ArticleJsonLd";
 
 export const metadata: Metadata = {
   title: "Seguro viagem pra Orlando: é obrigatório? O que cobre — Tarifly",
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 export default function SeguroViagem() {
   return (
     <article className="mx-auto max-w-2xl px-6 py-14">
+      <ArticleJsonLd metadata={metadata} path="/destinos/orlando/seguro-viagem" />
       <Link
         href="/destinos/orlando"
         className="text-sm font-medium text-brand hover:underline"

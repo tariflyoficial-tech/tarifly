@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
+import ArticleJsonLd from "../../../components/ArticleJsonLd";
 
 export const metadata: Metadata = {
   title: "Voo direto ou com conexão pra Orlando: vale a pena a diferença? — Tarifly",
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 export default function VooDiretoOuConexao() {
   return (
     <article className="mx-auto max-w-2xl px-6 py-14">
+      <ArticleJsonLd metadata={metadata} path="/destinos/orlando/voo-direto-ou-conexao" />
       <Link
         href="/destinos/orlando"
         className="text-sm font-medium text-brand hover:underline"

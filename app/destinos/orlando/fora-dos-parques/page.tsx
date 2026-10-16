@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BuscarCTA from "../../../components/BuscarCTA";
+import ArticleJsonLd from "../../../components/ArticleJsonLd";
 
 export const metadata: Metadata = {
   title: "Orlando fora dos parques: o que fazer sem gastar ingresso — Tarifly",
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 export default function ForaDosParques() {
   return (
     <article className="mx-auto max-w-2xl px-6 py-14">
+      <ArticleJsonLd metadata={metadata} path="/destinos/orlando/fora-dos-parques" />
       <Link
         href="/destinos/orlando"
         className="text-sm font-medium text-brand hover:underline"

@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { SITE_NAME, SITE_URL } from "./lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,9 +14,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Tarifly — viagem no seu ritmo",
   description:
     "Compare voos e hotéis em segundos e reserve direto com quem vende. Sem ligação, sem atendimento obrigatório.",
+  // "./" gera o canonical de cada página a partir da própria rota.
+  alternates: { canonical: "./" },
+  openGraph: { siteName: SITE_NAME, locale: "pt_BR", type: "website" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
